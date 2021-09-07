@@ -12,19 +12,19 @@ $graph:
 
   outputs:
 
-    info: 
-      outputSource: gdal-info/info
-      type: string
+    preview: 
+      outputSource: node_gdal/preview
+      type: File
 
   steps:
 
-    gdal-info:
+    node_gdal:
 
       in: 
         tif: tif
 
       out: 
-      - info
+      - preview
 
       run:
         "#gdal"
@@ -38,11 +38,13 @@ $graph:
     DockerRequirement: 
       dockerPull: docker.io/osgeo/gdal  
 
-  baseCommand: gdalinfo
-
-  stdout: message 
+  baseCommand: gdal_translate
 
   arguments: 
+  - -of
+  - PNG
+  - -ot 
+  - Byte
   - valueFrom: |
         ${ if (inputs.tif.startsWith("http")) {
 
@@ -54,6 +56,7 @@ $graph:
 
            } 
         }
+  - preview.png
 
   inputs:
 
@@ -62,9 +65,7 @@ $graph:
 
   outputs:
 
-    info: 
-      type: Any
+    preview: 
+      type: File
       outputBinding:
-        glob: message
-        loadContents: true
-        outputEval:  $( self[0].contents )
+        glob: preview.png
