@@ -8,9 +8,9 @@ Sometimes you need to create a file on the fly from input parameters, such as to
 
 To generate such files we can use the `InitialWorkDirRequirement`.
 
-## How
+## Recipe
 
-The example below shows a small wrapper shell script called `run.sh` that gets created at runtime. 
+The CWL document below shows a small wrapper shell script called `run.sh` that gets created at runtime. 
 
 The `basecommand` is an array combining `/bin/sh` and the created file `run.sh` and it will execute the command `/bin/sh run.sh`. This will run the file we create in the shell.
 
