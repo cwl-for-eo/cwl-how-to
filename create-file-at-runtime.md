@@ -29,7 +29,7 @@ how-to/cwl-how-to/create-file-at-runtime.cwl
 
 Use the parameters:
 
-```yaml  linenums="1" 
+```yaml linenums="1" 
 --8<--
 how-to/cwl-how-to/create-file-at-runtime.yml
 --8<--

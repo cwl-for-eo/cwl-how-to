@@ -11,3 +11,10 @@ how-to/cwl-how-to/conditional-workflows.cwl
 how-to/cwl-how-to/conditional-workflows.yml
 --8<--
 ```
+
+## Reference
+
+* [Conditional_execution](https://www.commonwl.org/v1.2/Workflow.html#Conditional_execution_(Optional))
+* [WorkflowOutputParameter](https://www.commonwl.org/v1.2/Workflow.html#WorkflowOutputParameter)
+* [PickValueMethod](https://www.commonwl.org/v1.2/Workflow.html#PickValueMethod)
+* [LinkMergeMethod](https://www.commonwl.org/v1.2/Workflow.html#LinkMergeMethod)
