@@ -2,11 +2,9 @@
 
 ## Goal 
 
-Set environment variables.
+Tools run in a restricted environment and do not inherit most environment variables from the parent process. Environment variables are set explicitly.
 
 ## Recipe 
-
-Tools run in a restricted environment and do not inherit most environment variables from the parent process. 
 
 Environment variables are set using `EnvVarRequirement`.
 
