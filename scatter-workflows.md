@@ -4,3 +4,4 @@
 --8<--
 how-to/cwl-how-to/scatter-workflows.cwl
 --8<--
+```

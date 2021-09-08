@@ -4,3 +4,5 @@
 --8<--
 how-to/cwl-how-to/scatter-input-parameters.cwl
 --8<--
+```
+
