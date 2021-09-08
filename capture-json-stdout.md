@@ -2,5 +2,5 @@
 
 ```yaml
 --8<--
-how-to/cwl-how-to/capture-json-stdout.cwl
+how-to/cwl-how-to/load-stac-item.cwl
 --8<--
