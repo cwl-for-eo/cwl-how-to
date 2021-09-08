@@ -63,24 +63,16 @@ $graph:
   - "100"
   - valueFrom: |
         ${ if (inputs.band.startsWith("http")) {
-
              return "/vsicurl/" + inputs.band; 
-
            } else { 
-
              return inputs.band;
-
            } 
         }
   - valueFrom: |
         ${ if (inputs.band.startsWith("http")) {
-
              return inputs.band.split("/").slice(-1)[0].replace(".tif", ".png"); 
-
            } else { 
-
              return inputs.band.replace(".tif", ".png");
-
            } 
         }
 
