@@ -1,4 +1,4 @@
-# How to nest workflows
+# How to create nested workflows
 
 ```yaml
 --8<--
