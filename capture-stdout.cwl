@@ -2,7 +2,6 @@ cwlVersion: v1.0
 
 $graph:
 - class: Workflow
-
   id: main
 
   inputs:
@@ -45,13 +44,9 @@ $graph:
   arguments: 
   - valueFrom: |
         ${ if (inputs.tif.startsWith("http")) {
-
              return "/vsicurl/" + inputs.tif; 
-
            } else { 
-
              return inputs.tif;
-
            } 
         }
 

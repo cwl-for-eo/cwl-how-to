@@ -47,13 +47,9 @@ $graph:
   - Byte
   - valueFrom: |
         ${ if (inputs.tif.startsWith("http")) {
-
              return "/vsicurl/" + inputs.tif; 
-
            } else { 
-
              return inputs.tif;
-
            } 
         }
   - preview.png
