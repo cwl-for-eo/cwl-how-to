@@ -146,3 +146,8 @@ INFO [workflow ] completed success
 }
 INFO Final process status is success
 ```
+
+## Reference
+
+* [InitialWorkDirRequirement](https://www.commonwl.org/v1.2/CommandLineTool.html#InitialWorkDirRequirement)
+
