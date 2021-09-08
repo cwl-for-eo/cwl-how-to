@@ -1,6 +1,6 @@
 # How to scatter workflows
 
-```yaml
+```yaml linenums="1"
 --8<--
 how-to/cwl-how-to/scatter-workflows.cwl
 --8<--
