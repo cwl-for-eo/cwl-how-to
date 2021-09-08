@@ -75,10 +75,7 @@ $graph:
       outputBinding:
         glob: message
         loadContents: true
-        outputEval: |
-          ${ 
-              return JSON.parse(self[0].contents).assets; 
-            }
+        outputEval: ${ return JSON.parse(self[0].contents).assets; }
 
 - class: CommandLineTool
   
