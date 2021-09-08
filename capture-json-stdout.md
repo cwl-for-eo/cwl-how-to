@@ -4,3 +4,4 @@
 --8<--
 how-to/cwl-how-to/load-stac-item.cwl
 --8<--
+```
