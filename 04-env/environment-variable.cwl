@@ -17,10 +17,6 @@ $graph:
       type: string
     blue: 
       type: string
-    s3_sign_request:
-      type: string
-    s3_region:
-      type: string
 
   outputs:
 
