@@ -18,10 +18,6 @@ $graph:
       type: string
     blue: 
       type: string
-    s3_sign_request:
-      type: string
-    s3_region:
-      type: string
     epsg_code: 
       type: string
 
@@ -41,8 +37,6 @@ $graph:
 
       in: 
         band: [red, green, blue]
-        s3_sign_request: s3_sign_request
-        s3_region: s3_region
         epsg_code: epsg_code
       out: 
       - preview
@@ -60,8 +54,6 @@ $graph:
 
       in: 
         band: [red, green, blue]
-        s3_sign_request: s3_sign_request
-        s3_region: s3_region
         epsg_code: epsg_code
         
       out: 
@@ -85,8 +77,7 @@ $graph:
       dockerPull: docker.io/osgeo/gdal  
     EnvVarRequirement:
       envDef:
-        AWS_NO_SIGN_REQUEST: $(inputs.s3_sign_request)
-        AWS_REGION: $(inputs.s3_region)
+        PROJ_LIB: /srv/conda/envs/notebook/share/proj
     NetworkAccess:
       networkAccess: true
 
@@ -98,15 +89,11 @@ $graph:
   - -ot 
   - Byte
   - valueFrom: $( inputs.band )
-  - valueFrom: $( inputs.band.split("/").slice(-1)[0].replace(".TIF", ".tif") )
+  - valueFrom: $( inputs.band.split("/").slice(-1)[0] )
 
   inputs:
 
     band: 
-      type: string
-    s3_sign_request: 
-      type: string
-    s3_region: 
       type: string
 
   outputs:
@@ -125,8 +112,6 @@ $graph:
     InlineJavascriptRequirement: {}
     EnvVarRequirement:
       envDef:
-        AWS_NO_SIGN_REQUEST: $(inputs.s3_sign_request)
-        AWS_REGION: $(inputs.s3_region)
         PROJ_LIB: /srv/conda/envs/notebook/share/proj
     NetworkAccess:
       networkAccess: true
@@ -149,10 +134,6 @@ $graph:
   inputs:
 
     band: 
-      type: string
-    s3_sign_request: 
-      type: string
-    s3_region: 
       type: string
     epsg_code:
       type: string

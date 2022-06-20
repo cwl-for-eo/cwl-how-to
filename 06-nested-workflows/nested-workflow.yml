@@ -1,8 +1,6 @@
 product: 
-- '/vsis3/landsat-pds/c1/L8/019/022/LC08_L1GT_019022_20170802_20170803_01_RT'
-- '/vsis3/landsat-pds/c1/L8/019/022/LC08_L1GT_019022_20190402_20190402_01_RT'
+- 'https://earth-search.aws.element84.com/v0/collections/sentinel-s2-l2a-cogs/items/S2B_10TFK_20210713_0_L2A'
+- 'https://earth-search.aws.element84.com/v0/collections/sentinel-s2-l2a-cogs/items/S2B_10TFK_20210723_0_L2A'
 red: "B4"
 green: "B3"
 blue: "B2"
-s3_region: us-west-2
-s3_sign_request: YES
