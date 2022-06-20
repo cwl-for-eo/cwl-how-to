@@ -12,7 +12,7 @@
 
 ```yaml linenums="1" hl_lines="42 62-65"
 --8<--
-how-to/cwl-how-to/capture-stdout.cwl
+how-to/cwl-how-to/02-stdout/capture-stdout.cwl
 --8<--
 ```
 
@@ -20,7 +20,7 @@ how-to/cwl-how-to/capture-stdout.cwl
 
 ```yaml
 --8<--
-how-to/cwl-how-to/capture-stdout.yml
+how-to/cwl-how-to/02-stdout/capture-stdout.yml
 --8<--
 ```
 

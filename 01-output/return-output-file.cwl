@@ -35,13 +35,14 @@ $graph:
 
   requirements:
     InlineJavascriptRequirement: {}
-  hints:
-    DockerRequirement: 
-      dockerPull: docker.io/osgeo/gdal  
     EnvVarRequirement:
       envDef:
         PROJ_LIB: /srv/conda/envs/notebook/share/proj
-        
+  hints:
+    DockerRequirement: 
+      dockerPull: docker.io/osgeo/gdal  
+    
+
   baseCommand: gdal_translate
 
   arguments: 

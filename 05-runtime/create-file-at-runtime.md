@@ -21,7 +21,7 @@ The final part is `entry`:, this is followed by `|-` which is YAML quoting synta
 
 ```yaml linenums="1" hl_lines="62-71 73"
 --8<--
-how-to/cwl-how-to/create-file-at-runtime.cwl
+how-to/cwl-how-to/05-runtime/create-file-at-runtime.cwl
 --8<--
 ```
 
@@ -31,7 +31,7 @@ Use the parameters:
 
 ```yaml linenums="1" 
 --8<--
-how-to/cwl-how-to/create-file-at-runtime.yml
+how-to/cwl-how-to/05-runtime/create-file-at-runtime.yml
 --8<--
 ```
 

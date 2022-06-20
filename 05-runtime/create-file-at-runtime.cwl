@@ -53,28 +53,28 @@ $graph:
 
   requirements:
     InlineJavascriptRequirement: {}
-    DockerRequirement: 
-      dockerPull: docker.io/osgeo/gdal  
     EnvVarRequirement:
       envDef:
         AWS_NO_SIGN_REQUEST: $(inputs.s3_sign_request)
         AWS_REGION: $(inputs.s3_region)
-        
-  baseCommand: gdal_translate
+    InitialWorkDirRequirement:
+      listing:
+        - entryname: run.sh
+          entry: |-
+            gdal_translate \
+              -of PNG \
+              -ot Byte \
+              -srcwin 1000 1000 500 500 \
+              $( inputs.band ) \
+              $( inputs.band.split("/").slice(-1)[0].replace(".TIF", ".png") )
+  hints:
+    DockerRequirement: 
+      dockerPull: docker.io/osgeo/gdal          
+  
+  baseCommand: ['/bin/sh', 'run.sh']
 
-  arguments: 
-  - -of
-  - PNG
-  - -ot 
-  - Byte
-  - -srcwin 
-  - "100"
-  - "100"
-  - "100"
-  - "100"
-  - valueFrom: $( inputs.band )
-  - valueFrom: $( inputs.band.split("/").slice(-1)[0].replace(".TIF", ".png") )
-
+  arguments: []
+  
   inputs:
 
     band: 

@@ -46,6 +46,11 @@ $graph:
 
   requirements:
     InlineJavascriptRequirement: {}
+    EnvVarRequirement:
+      envDef:
+        PROJ_LIB: /srv/conda/envs/notebook/share/proj
+
+  hints:
     DockerRequirement: 
       dockerPull: docker.io/osgeo/gdal  
 

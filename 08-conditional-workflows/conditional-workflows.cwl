@@ -123,14 +123,16 @@ $graph:
   
   requirements:
     InlineJavascriptRequirement: {}
-    DockerRequirement: 
-      dockerPull: docker.io/osgeo/gdal  
     EnvVarRequirement:
       envDef:
         AWS_NO_SIGN_REQUEST: $(inputs.s3_sign_request)
         AWS_REGION: $(inputs.s3_region)
+        PROJ_LIB: /srv/conda/envs/notebook/share/proj
     NetworkAccess:
       networkAccess: true
+  hints:
+    DockerRequirement: 
+      dockerPull: docker.io/osgeo/gdal  
 
   baseCommand: gdalwarp
 

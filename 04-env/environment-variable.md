@@ -12,7 +12,7 @@ The CWL document below sets the environment variables `AWS_NO_SIGN_REQUEST` and 
 
 ```yaml linenums="1" hl_lines="58-61"
 --8<--
-how-to/cwl-how-to/environment-variable.cwl
+how-to/cwl-how-to/04-env/environment-variable.cwl
 --8<--
 ```
 
@@ -22,7 +22,7 @@ Use the parameters:
 
 ```yaml  linenums="1" 
 --8<--
-how-to/cwl-how-to/environment-variable.yml
+how-to/cwl-how-to/04-env/environment-variable.yml
 --8<--
 ```
 
