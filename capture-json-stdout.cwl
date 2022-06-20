@@ -53,6 +53,7 @@ $graph:
 
   requirements:
     InlineJavascriptRequirement: {}
+  hints:
     DockerRequirement: 
       dockerPull: docker.io/curlimages/curl:latest
 
@@ -83,6 +84,11 @@ $graph:
 
   requirements:
     InlineJavascriptRequirement: {}
+    EnvVarRequirement:
+      envDef:
+        PROJ_LIB: /srv/conda/envs/notebook/share/proj
+    
+  hints:
     DockerRequirement: 
       dockerPull: docker.io/osgeo/gdal:latest
 
