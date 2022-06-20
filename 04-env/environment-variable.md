@@ -8,7 +8,7 @@ Tools run in a restricted environment and do not inherit most environment variab
 
 Environment variables are set using `EnvVarRequirement`.
 
-The CWL document below sets the environment variables `AWS_NO_SIGN_REQUEST` and `AWS_REGION` to access GeoTIFF files hosted on an object storage exposing the S3 interface.
+The CWL document below sets the environment variable `PROJ_LIB` used by `gdal`
 
 ```yaml linenums="1" hl_lines="58-61"
 --8<--

@@ -55,9 +55,8 @@ $graph:
     InlineJavascriptRequirement: {}
     EnvVarRequirement:
       envDef:
-        AWS_NO_SIGN_REQUEST: $(inputs.s3_sign_request)
-        AWS_REGION: $(inputs.s3_region)
-  hitns:
+        PROJ_LIB: /srv/conda/envs/notebook/share/proj
+  hints:
     DockerRequirement: 
       dockerPull: docker.io/osgeo/gdal         
   
