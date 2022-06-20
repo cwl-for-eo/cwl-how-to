@@ -67,7 +67,7 @@ $graph:
   - "100"
   - "100"
   - valueFrom: $( inputs.band )
-  - valueFrom: $( inputs.band.split("/").slice(-1)[0].replace(".TIF", ".png") )
+  - valueFrom: $( inputs.band.split("/").slice(-1)[0].replace(".tif", ".png") )
 
   inputs:
 
