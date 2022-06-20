@@ -59,7 +59,7 @@ $graph:
               -ot Byte \
               -srcwin 1000 1000 500 500 \
               $( inputs.band ) \
-              $( inputs.band.split("/").slice(-1)[0].replace(".TIF", ".png") )
+              $( inputs.band.split("/").slice(-1)[0].replace(".tif", ".png") )
   hints:
     DockerRequirement: 
       dockerPull: docker.io/osgeo/gdal          
