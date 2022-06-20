@@ -17,10 +17,6 @@ $graph:
       type: string
     blue: 
       type: string
-    s3_sign_request:
-      type: string
-    s3_region:
-      type: string
 
   outputs:
 
@@ -34,8 +30,6 @@ $graph:
 
       in: 
         band: [red, green, blue]
-        s3_sign_request: s3_sign_request
-        s3_region: s3_region
         
       out: 
       - preview
@@ -55,8 +49,7 @@ $graph:
     InlineJavascriptRequirement: {}
     EnvVarRequirement:
       envDef:
-        AWS_NO_SIGN_REQUEST: $(inputs.s3_sign_request)
-        AWS_REGION: $(inputs.s3_region)
+        PROJ_LIB: /srv/conda/envs/notebook/share/proj
     InitialWorkDirRequirement:
       listing:
         - entryname: run.sh
