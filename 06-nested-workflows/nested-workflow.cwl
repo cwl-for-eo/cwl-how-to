@@ -115,7 +115,7 @@ $graph:
   - "1000"
   - "500"
   - "500"
-  - valueFrom: $( inputs.product + "/" + inputs.product.split("/").slice(-1)[0] + "_" + inputs.band + ".TIF")
+  - valueFrom: $( inputs.product + "/" + inputs.band + ".tif")
   - valueFrom: $(  inputs.product.split("/").slice(-1)[0] + "_" + inputs.band + ".png" )
 
   inputs:
