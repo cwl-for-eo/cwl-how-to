@@ -32,7 +32,7 @@ $graph:
       type: string[]
       default: ["green", "nir"]
 
-    item:
+    stac_item:
       doc: STAC item
       type: string
 
@@ -40,7 +40,7 @@ $graph:
     - id: cropped
       outputSource: 
       - node_crop/cropped
-      type: File
+      type: File[]
 
   steps:
 
@@ -49,7 +49,7 @@ $graph:
       run: "#crop"
 
       in:
-        item: item
+        item: stac_item
         aoi: aoi
         epsg: epsg
         band: 
@@ -67,14 +67,14 @@ $graph:
   requirements:
     InlineJavascriptRequirement: {}
     EnvVarRequirement:
-      envDef: 
-        PYTHONPATH: /workspaces/vscode-binder/command-line-tools/crop:/home/jovyan/water-bodies/command-line-tools/crop
-        PROJ_LIB: /srv/conda/envs/env_crop/share/proj/
+      envDef:
+        PYTHONPATH: $HOME
+        PROJ_LIB: /srv/conda/envs/notebook/share/proj
     InitialWorkDirRequirement:
       listing:
         - entryname: run.sh
           entry: |-
-            python -m app.py $@
+            python -m app $@
         - entryname: app.py
           entry: |-
             import click
@@ -163,7 +163,8 @@ $graph:
 
             if __name__ == "__main__":
                 crop()
-  baseCommand: ['/bin/sh', 'run.sh']  arguments: []
+  baseCommand: ['/bin/sh', 'run.sh']  
+  arguments: []
   inputs:
     item:
       type: string
