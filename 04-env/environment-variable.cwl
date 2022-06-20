@@ -34,8 +34,6 @@ $graph:
 
       in: 
         band: [red, green, blue]
-        s3_sign_request: s3_sign_request
-        s3_region: s3_region
         
       out: 
       - preview
@@ -78,10 +76,6 @@ $graph:
   inputs:
 
     band: 
-      type: string
-    s3_sign_request: 
-      type: string
-    s3_region: 
       type: string
 
   outputs:
