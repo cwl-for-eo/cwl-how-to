@@ -2,37 +2,25 @@ cwlVersion: v1.0
 
 $graph:
 - class: Workflow
-
   id: main
-
   inputs:
-
     tif: 
       type: string
-
   outputs:
-
     preview: 
       outputSource: node_gdal/preview
       type: File
-
   steps:
-
     node_gdal:
-
       in: 
         tif: tif
-
       out: 
       - preview
-
       run:
         "#gdal"
 
 - class: CommandLineTool
-  
   id: gdal
-
   requirements:
     InlineJavascriptRequirement: {}
     EnvVarRequirement:
@@ -41,10 +29,7 @@ $graph:
   hints:
     DockerRequirement: 
       dockerPull: docker.io/osgeo/gdal  
-    
-
   baseCommand: gdal_translate
-
   arguments: 
   - -of
   - PNG
@@ -58,14 +43,10 @@ $graph:
            } 
         }
   - preview.png
-
   inputs:
-
     tif:
       type: string
-
   outputs:
-
     preview: 
       type: File
       outputBinding:
