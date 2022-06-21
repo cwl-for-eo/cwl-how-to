@@ -16,7 +16,7 @@ how-to/cwl-how-to/01-output/return-output-file.yml
 
 ## Run this how-to on Code Server
 
-1. Click <a href="https://mybinder.org/v2/gh/cwl-for-eo/vscode-binder/master?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fcwl-for-eo%252Fcwl-how-to.git%26urlpath%3D%252Fvscode%252F%253Ffolder%253D%252Fhome%252Fjovyan%252Fcwl-how-to.git%252F01-output%26branch%3Dmaster" target="_blank"><img src="https://user-images.githubusercontent.com/5768801/99205104-8d519600-2785-11eb-9171-e2952f22d2ab.png" alt="Run me on Code Server" style="width:42px;height:42px;"></img></a> to run a Code server instance on Binder
+1. <a href="https://mybinder.org/v2/gh/cwl-for-eo/vscode-binder/master?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fcwl-for-eo%252Fcwl-how-to.git%26urlpath%3D%252Fvscode%252F%253Ffolder%253D%252Fhome%252Fjovyan%252Fcwl-how-to.git%252F01-output%26branch%3Dmaster" target="_blank"><img src="https://img.shields.io/badge/launch-code%20server-lightgrey" alt="Run me on Code Server" ></img></a> 
 2. Open a new terminal
 3. Execute
 
