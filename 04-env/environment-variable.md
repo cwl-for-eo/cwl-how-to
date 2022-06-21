@@ -10,7 +10,7 @@ Environment variables are set using `EnvVarRequirement`.
 
 The CWL document below sets the environment variable `PROJ_LIB` used by `gdal`
 
-```yaml linenums="1" hl_lines="58-61"
+```yaml linenums="1" hl_lines="50-52"
 --8<--
 how-to/cwl-how-to/04-env/environment-variable.cwl
 --8<--

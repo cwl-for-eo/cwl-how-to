@@ -19,7 +19,7 @@ The `basecommand` is an array combining `/bin/sh` and the created file `run.sh` 
 The final part is `entry`:, this is followed by `|-` which is YAML quoting syntax, and means that you are using a multiline string (without it we would need to write the whole script on one line). 
 
 
-```yaml linenums="1" hl_lines="62-71 73"
+```yaml linenums="1" hl_lines="53-62 67"
 --8<--
 how-to/cwl-how-to/05-runtime/create-file-at-runtime.cwl
 --8<--

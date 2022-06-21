@@ -10,7 +10,7 @@
 
 ## CWL
 
-```yaml linenums="1" hl_lines="42 62-65"
+```yaml linenums="1" hl_lines="46 64-69"
 --8<--
 how-to/cwl-how-to/02-stdout/capture-stdout.cwl
 --8<--

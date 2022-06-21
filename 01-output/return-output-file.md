@@ -1,6 +1,6 @@
 # How to return an output file
 
-```yaml linenums="1" hl_lines="15-17 64-67"
+```yaml linenums="1" hl_lines="15-17 69-72"
 --8<--
 how-to/cwl-how-to/01-output/return-output-file.cwl
 --8<--
