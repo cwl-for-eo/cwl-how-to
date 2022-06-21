@@ -1,6 +1,6 @@
 # How to return an output file
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/cwl-for-eo/vscode-binder/master?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fcwl-for-eo%252Fcwl-how-to.git%26urlpath%3D%252Fvscode%252F%253Ffolder%253D%252Fhome%252Fjovyan%252Fcwl-how-to.git%252F01-output%26branch%3Dmaster)
+
 
 ```yaml linenums="1" hl_lines="15-17 69-72"
 --8<--
@@ -12,4 +12,48 @@ how-to/cwl-how-to/01-output/return-output-file.cwl
 --8<--
 how-to/cwl-how-to/01-output/return-output-file.yml
 --8<--
+```
+
+## Run this how-to on Code Server
+
+1. Click <a href="https://mybinder.org/v2/gh/cwl-for-eo/vscode-binder/master?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fcwl-for-eo%252Fcwl-how-to.git%26urlpath%3D%252Fvscode%252F%253Ffolder%253D%252Fhome%252Fjovyan%252Fcwl-how-to.git%252F01-output%26branch%3Dmaster" target="_blank"><img src="https://user-images.githubusercontent.com/5768801/99205104-8d519600-2785-11eb-9171-e2952f22d2ab.png" alt="Run me on Code Server" style="width:42px;height:42px;"></img></a> to run a Code server instance on Binder
+2. Open a new terminal
+3. Execute
+
+```
+ cwltool --no-container return-output-file.cwl return-output-file.yml 
+```
+
+This will return:
+
+```
+INFO /srv/conda/envs/notebook/bin/cwltool 3.1.20220607081835
+INFO Resolved 'return-output-file.cwl' to 'file:///home/jovyan/cwl-how-to.git/01-output/return-output-file.cwl'
+INFO [workflow ] start
+INFO [workflow ] starting step node_gdal
+INFO [step node_gdal] start
+INFO [job node_gdal] /tmp/dm_vv1x5$ gdal_translate \
+    -of \
+    PNG \
+    -ot \
+    Byte \
+    /vsicurl/https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/53/H/PA/2021/7/S2B_53HPA_20210723_0_L2A/B8A.tif \
+    preview.png
+Input file size is 5490, 5490
+0...10...20...30...40...50...60...70...80...90...100 - done.
+INFO [job node_gdal] Max memory used: 53MiB
+INFO [job node_gdal] completed success
+INFO [step node_gdal] completed success
+INFO [workflow ] completed success
+{
+    "preview": {
+        "location": "file:///home/jovyan/cwl-how-to.git/01-output/preview.png",
+        "basename": "preview.png",
+        "class": "File",
+        "checksum": "sha1$042f63c30a8a0ddb0d83fd8f3e84301c18957daf",
+        "size": 9217085,
+        "path": "/home/jovyan/cwl-how-to.git/01-output/preview.png"
+    }
+}
+INFO Final process status is success
 ```
