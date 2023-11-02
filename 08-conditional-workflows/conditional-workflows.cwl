@@ -75,7 +75,7 @@ $graph:
     InlineJavascriptRequirement: {}
     EnvVarRequirement:
       envDef:
-        PROJ_LIB: /srv/conda/envs/notebook/share/proj
+        PROJ_LIB: /usr/local/share/proj
     NetworkAccess:
       networkAccess: true
   hints: 
@@ -113,7 +113,7 @@ $graph:
     InlineJavascriptRequirement: {}
     EnvVarRequirement:
       envDef:
-        PROJ_LIB: /srv/conda/envs/notebook/share/proj
+        PROJ_LIB: /usr/local/share/proj
     NetworkAccess:
       networkAccess: true
   hints:
